@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trello Belén</title>
+  <link rel="stylesheet" href="trello.css">
+  <script defer src="UT1-T5.js"> </script>
+</head>
+
+<body>
+  <nav>
+    <div class="barra">
+      <select nombre="Opciones" , id="Opciones">
+        <option>Opciones</option>
+        <option value=<a href="https://team.atlassian.com/your-work" target="_blank">Inicio de Atlassian</a></option>
+        <option value=<a href="https://trello.com/u/belenferreira6/boards" target="_blank">Trello</a></option>
+      </select>
+
+      <button><a href="https://trello.com/" target="_blank">Trello</a></button>
+
+      <select nombre="Espacios de trabajo" , id="Espacios de trabajo">
+        <option>Espacio de trabajo</option>
+        <option></option>
+      </select>
+
+      <select nombre="reciente" , id="reciente">
+        <option>Reciente</option>
+        <option></option>
+      </select>
+
+      <select nombre="marcado" , id="marcado">
+        <option>Marcado</option>
+        <option></option>
+      </select>
+
+      <select nombre="plantilla" , id="plantilla">
+        <option>Plantilla</option>
+        <option></option>
+      </select>
+
+      <button><a href="https://trello.com/" target="_blank">Crear</a></button>
+
+      <input type="text" id="buscar" placeholder="Buscar">
+
+      <img src="https://planetafacil.plenainclusion.org/wp-content/uploads/2020/04/bell-1096280_1280-1024x1024.png" alt="Notificaciones" width="30" height="30">
+      <img src="https://emojigraph.org/media/facebook/information_2139-fe0f.png" alt="Información" width="30" height="30">
+      <img src="https://static.vecteezy.com/system/resources/previews/018/742/015/non_2x/minimal-profile-account-symbol-user-interface-theme-3d-icon-rendering-illustration-isolated-in-transparent-background-png.png" alt="Cuenta" width="31" height="31">
+      
+    </div>
+  </nav>
+
+  <div class="tarjetas">
+    <div id="To Do" class="tarjeta">
+      <h3>Lista de tareas</h3>
+      <button class="agregarNuevaTarea"> + Añadir una tarea</button>
+      <button>...</button>
+      <button>[]</button>
+    </div>
+    <div id="In Progress" class="tarjeta">
+      <h3>En proceso</h3>
+      <button class="agregarNuevaTarea"> + Añadir una tarea</button>
+      <button>...</button>
+      <button>[]</button>
+    </div>
+    <div id="Done" class="tarjeta">
+      <h3>Hecho</h3>
+      <button class="agregarNuevaTarea"> + Añadir una tarea</button>
+      <button>...</button>
+      <button>[]</button>
+    </div>
+      <button onclick="botonAgregar()" id="botonAgregar" >
+        Añadir otra lista
+      </button>
+  </div>
+
+  <div id="ventanaModal" class="modal">
+    <div class="contenidoModal">
+      <span class="cerrar">&times;</span>
+      <center><h3>Nueva tarjeta</h3></center>
+      <p>Titulo: <input type="text" id="titulo" autocomplete="off"></p>
+      <p>Descrpción: <input type="text" id="descripcion" autocomplete="off"></p>
+      <p>Asignado a: <input type="text" id="asignado" autocomplete="off"></p>
+      <p>Fecha de inicio: <input type="text" id="inicio" autocomplete="off"></p>
+      <p>Termina en: <input type="text" id="fin" autocomplete="off"></p>
+      <p>Prioridad: <input type="text" id="prioridad" autocomplete="off"></p>
+      <p>Comentarios: <input type="text" id="comentarios" autocomplete="off"></p>
+      <button onclick="crearTarjeta()"> 
+        Guardar
+      </button>
+    </div>
+  </div>
+
+  <div id="modalDetalleTarea"  class="modal" style="display: none;">
+    <div class="contenidoModal">
+      <span class="cerrarTarea">&times;</span>
+      <center><h3>Detalles de la tarea</h3></center>
+      <p id="detalleTitulo"></p>
+      <p id="detalleDescripcion"></p>
+      <p id="detalleAsignado"></p>
+      <p id="detalleInicio"></p>
+      <p id="detalleFin"></p>
+      <p id="detallePrioridad"></p>
+      <p id="detalleComentarios"></p>
+    </div>
+  </div>
+
+  <div id="modalEditarTarea"  class="modal" style="display: none;">
+    <div class="contenidoModal">
+      <span class="cerrarEdicion">&times;</span>
+      <center><h3>Editar tarea</h3></center>
+      <p>Título: <input type="text" id="tituloEdicion" autocomplete="off"></p>
+      <p>Descripción: <input type="text" id="descripcionEdicion" autocomplete="off"></p>
+      <p>Asignado a: <input type="text" id="asignadoEdicion" autocomplete="off"></p>
+      <p>Fecha de inicio: <input type="text" id="inicioEdicion" autocomplete="off"></p>
+      <p>Termina en: <input type="text" id="finEdicion" autocomplete="off"></p>
+      <p>Prioridad: <input type="text" id="prioridadEdicion" autocomplete="off"></p>
+      <p>Comentarios: <input type="text" id="comentariosEdicion" autocomplete="off"></p>
+      <button onclick="guardarCambiosTarea(this)" data-task-id=""> 
+        Guardar
+      </button>
+    </div>
+  </div>
+    
+</body>
+</html>
