@@ -1,0 +1,20 @@
+.comenzar{
+    background-color: rgb(107, 107, 231);
+    color: white;
+}
+
+.menor{
+    background-color: rgb(247, 179, 190);
+    color: white;
+}
+
+.igual{
+    background-color: rgb(56, 119, 98);
+    color: white;
+}
+
+.mayor{
+    background-color: rgb(245, 135, 87);
+    color: white;
+}
+
