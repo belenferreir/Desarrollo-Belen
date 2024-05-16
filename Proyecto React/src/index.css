@@ -1,0 +1,65 @@
+body{
+  background-color: rgb(175, 170, 177);
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+button {
+  background-color: rgb(241, 132, 225);
+  color: black;
+  width: 240px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: rgb(241, 132, 225);
+  border-radius: 8px;
+}
+
+.tarjeta {
+  background-color: rgb(246, 208, 243);
+  padding: 1em;
+  margin: 10px;
+  width: 245px;
+  border-radius: 8px;
+}
+
+.tareasContainer {
+  background-color: rgb(249, 167, 231);
+  color: black;
+  width: 240px;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: rgb(252, 182, 242);
+  border-radius: 8px;
+  margin: 3px;
+}
+
+.linkk {
+  background-color: rgb(252, 182, 242);
+  color: black;
+  text-decoration: none;
+  padding: 1em;
+  margin: 5px;
+  margin-right: 17px;
+  border-radius: 8px;
+  display: inline-block; 
+}
+
+.link-container {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+}
