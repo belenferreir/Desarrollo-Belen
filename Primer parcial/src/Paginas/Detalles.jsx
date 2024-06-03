@@ -7,7 +7,7 @@ import { useParams, useNavigate } from "react-router-dom";
 const Detalles = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const [juegos, setJuegos] = useState(null);
+    const [juego, setJuego] = useState(null);
 
     useEffect(() => {
         if (id) {
@@ -18,14 +18,14 @@ const Detalles = () => {
     const fetchJuego = async (id) => {
         const data = await getJuegos();
         const juegoEncontrado = data.find(j => j.id === parseInt(id));
-        setJuegos(juegoEncontrado);
+        setJuego(juegoEncontrado);
     };
 
     return (
         <div className="detallesJuegos">
-            {juegos ? (
+            {juego ? (
                 <>
-                    <Juegos juegos={juegos} mostrarTitulo={false} />
+                    <Juegos juegos={juego} mostrarTitulo={false} />
                 </>
             ) : (
                 <p>Cargando...</p>
